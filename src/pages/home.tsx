@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Card, Col, Row, Button } from 'react-bootstrap'
 
@@ -21,10 +20,10 @@ const HomePage = () => {
         }
       `}
       </style>
-      <Container fluid style={{marginTop: '40px', marginBottom: '45px',height: '100vh', backgroundImage: `url(${background})` }}>
+      <Container fluid style={{height: '100%', backgroundImage: `url(${background})`, backgroundPosition: 'center', backgroundSize: 'cover'}}>
         <Row className="my-row">
           <Col className="my-col">
-            <Button variant="primary">Explorez</Button>
+            <Button variant="primary" as={Link} to={'/categories'}>Explorez</Button>
           </Col>
           <Col className="my-col">
             <Card>

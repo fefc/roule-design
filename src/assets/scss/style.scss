@@ -1,9 +1,11 @@
 // Override default variables before the import
 $body-bg: rgb(248, 249, 251);
 
-// Import Bootstrap and its default variables
-@import '~bootstrap/scss/bootstrap.scss';
-
+// change the theme
+$theme-colors: (
+  "primary": #719164,
+  "danger": #ff4136
+);
 
 div.noPadding {
     padding-left: 0;
@@ -14,3 +16,6 @@ div.noMargin {
     margin-left: 0;
     margin-right: 0;
 }
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';

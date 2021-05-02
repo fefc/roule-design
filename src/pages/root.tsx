@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter,  Switch,  Route,  Link } from 'react-router-dom';
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
+import { Navbar, Nav, Container } from 'react-bootstrap'
 
 import HomePage from './home';
 import CategoriesPage from './categories';
@@ -20,7 +20,7 @@ import CategoriesPage from './categories';
 const RootPage = () => {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <Navbar fixed="top" bg="light" expand="lg">
+      <Navbar fixed="top" bg="primary" expand="lg">
         <Navbar.Brand as={Link} to="/" style={{fontWeight: 700}}>
           Roule Design
         </Navbar.Brand>
@@ -32,13 +32,13 @@ const RootPage = () => {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-      <div className="main">
+      <Container fluid className="noPadding" style={{marginTop: '56px', height: 'calc(100vh - 56px)'}}>
         <Switch>
           <Route exact path="/" component={ HomePage }/>
           <Route exact path="/categories" component={ CategoriesPage }/>
 
         </Switch>
-      </div>
+      </Container>
     </BrowserRouter>
   );
 }

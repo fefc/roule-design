@@ -7,7 +7,7 @@ type props = {
   backgroundImage: string
 };
 
-const Category: FC<props> = ({ title, backgroundImage }) => {
+const Project: FC<props> = ({ title, backgroundImage }) => {
   const [hidden, setDisplay] = useState(false);
   function toggleVisibility() {
      hidden===true?setDisplay(false)
@@ -15,7 +15,7 @@ const Category: FC<props> = ({ title, backgroundImage }) => {
   }
 
   return (
-    <Card className="text-center" bg="primary" border="primary">
+    <Card className="text-center">
       <Card.Img src={backgroundImage} alt="Card image" />
       <Card.ImgOverlay style={{display: 'flex', justifyContent: 'center', alignItems:'center'}}>
         <Card.Title><Button variant="outline-primary">{title}</Button></Card.Title>
@@ -24,4 +24,4 @@ const Category: FC<props> = ({ title, backgroundImage }) => {
   );
 };
 
-export default Category;
+export default Project;

@@ -5,6 +5,7 @@ import { Navbar, Nav, Container } from 'react-bootstrap'
 import HomePage from './home';
 import CategoriesPage from './categories';
 import ProjectsPage from './projects';
+import ProjectPage from './project';
 
 /*import ErrorPage from './error';*/
 
@@ -39,6 +40,8 @@ const RootPage = () => {
           <Route exact path="/" component={ HomePage }/>
           <Route exact path="/categories" component={ CategoriesPage }/>
           <Route exact path="/categories/:category" component={ ProjectsPage }/>
+          <Route exact path="/projects/:project" component={ ProjectPage }/>
+
 
         </Switch>
       </Container>

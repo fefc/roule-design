@@ -9,26 +9,32 @@ import Project from "./../components/project";
 const ProjectsPage = () => {
   const projects = [
     {
+      id: 'durance',
       title: 'Durance',
       backgroundImage: background,
     },
     {
+      id: 'te-ra',
       title: 'Te Ra',
       backgroundImage: background,
     },
     {
+      id: 'blabla',
       title: 'BlaBla',
       backgroundImage: background,
     },
     {
+      id: 'j-b',
       title: 'J-B',
       backgroundImage: background,
     },
     {
+      id: 'meuble',
       title: 'Meuble',
       backgroundImage: background,
     },
     {
+      id: 'couture',
       title: 'Couture',
       backgroundImage: background,
     },
@@ -53,18 +59,18 @@ const ProjectsPage = () => {
       <Container fluid>
         <Row>
           <Col className="noPadding" lg={6}>
-            <Project title={projects[0].title} backgroundImage={projects[0].backgroundImage}></Project>
+            <Project project={projects[0]}></Project>
           </Col>
           <Col className="noPadding" lg={6}>
-          <Project title={projects[1].title} backgroundImage={projects[1].backgroundImage}></Project>
+            <Project project={projects[1]}></Project>
           </Col>
         </Row>
         <Row>
           <Col className="noPadding" lg={6}>
-          <Project title={projects[2].title} backgroundImage={projects[2].backgroundImage}></Project>
+            <Project project={projects[2]}></Project>
           </Col>
           <Col className="noPadding" lg={6}>
-          <Project title={projects[3].title} backgroundImage={projects[3].backgroundImage}></Project>
+            <Project project={projects[3]}></Project>
           </Col>
         </Row>
       </Container>

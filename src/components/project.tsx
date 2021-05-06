@@ -15,10 +15,10 @@ const Project: FC<props> = ({ title, backgroundImage }) => {
   }
 
   return (
-    <Card className="text-center">
+    <Card className="text-center" style={{border: 'none', padding: '3rem'}}>
       <Card.Img src={backgroundImage} alt="Card image" />
-      <Card.ImgOverlay style={{display: 'flex', justifyContent: 'center', alignItems:'center'}}>
-        <Card.Title><Button variant="outline-primary">{title}</Button></Card.Title>
+      <Card.ImgOverlay style={{display: 'flex', justifyContent: 'center', alignItems:'end'}}>
+        <Card.Title><Button variant="primary">{title}</Button></Card.Title>
       </Card.ImgOverlay>
     </Card>
   );

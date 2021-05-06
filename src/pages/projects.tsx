@@ -4,26 +4,34 @@ import { Container, Card, Col, Row, Button } from 'react-bootstrap'
 
 import background from './../assets/imgs/background.jpg';
 
-import Category from "./../components/category";
+import Project from "./../components/project";
 
 const ProjectsPage = () => {
-  const cateogories = [
+  const projects = [
     {
-      title: 'Design Produit',
-      backgroundImage: background
+      title: 'Durance',
+      backgroundImage: background,
     },
     {
-      title: 'Graphisme',
-      backgroundImage: background
+      title: 'Te Ra',
+      backgroundImage: background,
     },
     {
-      title: 'Packaging',
-      backgroundImage: background
+      title: 'BlaBla',
+      backgroundImage: background,
     },
     {
-      title: 'Photographie',
-      backgroundImage: background
-    }
+      title: 'J-B',
+      backgroundImage: background,
+    },
+    {
+      title: 'Meuble',
+      backgroundImage: background,
+    },
+    {
+      title: 'Couture',
+      backgroundImage: background,
+    },
   ]
 
 
@@ -45,18 +53,18 @@ const ProjectsPage = () => {
       <Container fluid>
         <Row>
           <Col className="noPadding" lg={6}>
-            <Category title={cateogories[0].title} backgroundImage={cateogories[0].backgroundImage}></Category>
+            <Project title={projects[0].title} backgroundImage={projects[0].backgroundImage}></Project>
           </Col>
           <Col className="noPadding" lg={6}>
-          <Category title={cateogories[1].title} backgroundImage={cateogories[1].backgroundImage}></Category>
+          <Project title={projects[1].title} backgroundImage={projects[1].backgroundImage}></Project>
           </Col>
         </Row>
         <Row>
           <Col className="noPadding" lg={6}>
-          <Category title={cateogories[2].title} backgroundImage={cateogories[2].backgroundImage}></Category>
+          <Project title={projects[2].title} backgroundImage={projects[2].backgroundImage}></Project>
           </Col>
           <Col className="noPadding" lg={6}>
-          <Category title={cateogories[3].title} backgroundImage={cateogories[3].backgroundImage}></Category>
+          <Project title={projects[3].title} backgroundImage={projects[3].backgroundImage}></Project>
           </Col>
         </Row>
       </Container>

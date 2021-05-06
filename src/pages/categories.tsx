@@ -9,18 +9,22 @@ import Category from "./../components/category";
 const CategoriesPage = () => {
   const cateogories = [
     {
+      id: 'design-produit',
       title: 'Design Produit',
       backgroundImage: background
     },
     {
+      id: 'graphisme',
       title: 'Graphisme',
       backgroundImage: background
     },
     {
+      id: 'packaging',
       title: 'Packaging',
       backgroundImage: background
     },
     {
+      id: 'photographie',
       title: 'Photographie',
       backgroundImage: background
     }
@@ -45,18 +49,18 @@ const CategoriesPage = () => {
       <Container fluid>
         <Row>
           <Col className="noPadding" lg={6}>
-            <Category title={cateogories[0].title} backgroundImage={cateogories[0].backgroundImage}></Category>
+            <Category category={cateogories[0]}></Category>
           </Col>
           <Col className="noPadding" lg={6}>
-          <Category title={cateogories[1].title} backgroundImage={cateogories[1].backgroundImage}></Category>
+          <Category category={cateogories[1]}></Category>
           </Col>
         </Row>
         <Row>
           <Col className="noPadding" lg={6}>
-          <Category title={cateogories[2].title} backgroundImage={cateogories[2].backgroundImage}></Category>
+          <Category category={cateogories[2]}></Category>
           </Col>
           <Col className="noPadding" lg={6}>
-          <Category title={cateogories[3].title} backgroundImage={cateogories[3].backgroundImage}></Category>
+          <Category category={cateogories[3]}></Category>
           </Col>
         </Row>
       </Container>

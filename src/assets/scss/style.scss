@@ -17,5 +17,18 @@ div.noMargin {
     margin-right: 0;
 }
 
+a.btn {
+  border-radius: 0;
+}
+
+div.card {
+  opacity: 0.9;
+  border-radius: 0;
+
+  div.card-header {
+    text-align: center !important;
+  }
+}
+
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';

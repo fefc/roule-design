@@ -4,6 +4,10 @@ import { Container, Card, Col, Row, Button } from 'react-bootstrap'
 
 import background from './../assets/imgs/background.jpg';
 
+import designProduit from './../assets/imgs/design_produit.jpg';
+import graphisme from './../assets/imgs/graphisme.jpg';
+import photograophie from './../assets/imgs/photographie.jpg';
+
 import Category from "./../components/category";
 
 const CategoriesPage = () => {
@@ -11,12 +15,12 @@ const CategoriesPage = () => {
     {
       id: 'design-produit',
       title: 'Design Produit',
-      backgroundImage: background
+      backgroundImage: designProduit
     },
     {
       id: 'graphisme',
       title: 'Graphisme',
-      backgroundImage: background
+      backgroundImage: graphisme
     },
     {
       id: 'packaging',
@@ -26,28 +30,15 @@ const CategoriesPage = () => {
     {
       id: 'photographie',
       title: 'Photographie',
-      backgroundImage: background
+      backgroundImage: photograophie
     }
   ]
 
 
   return (
     <>
-      <style type="text/css">
-      {`
-        .my-row {
-          height: 100%;
-        }
-
-        .my-col {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-      `}
-      </style>
-      <Container fluid>
-        <Row>
+      <Container fluid className="d-flex flex-column" style={{position: 'absolute', top: '56px', bottom: 0}}>
+        <Row className="flex-fill">
           <Col className="noPadding" lg={6}>
             <Category category={cateogories[0]}></Category>
           </Col>
@@ -55,7 +46,7 @@ const CategoriesPage = () => {
           <Category category={cateogories[1]}></Category>
           </Col>
         </Row>
-        <Row>
+        <Row className="flex-fill">
           <Col className="noPadding" lg={6}>
           <Category category={cateogories[2]}></Category>
           </Col>

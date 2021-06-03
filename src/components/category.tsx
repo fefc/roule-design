@@ -19,10 +19,10 @@ const Category: FC<props> = ({ category }) => {
   }
 
   return (
-    <Card className="text-center" bg="primary" border="primary">
-      <Card.Img src={category.backgroundImage} alt="Card image" />
-      <Card.ImgOverlay style={{display: 'flex', justifyContent: 'center', alignItems:'center'}}>
-        <Card.Title><Button variant="outline-primary" as={Link} to={'/categories/' + category.id}>{category.title}</Button></Card.Title>
+    <Card className="text-center" style={{opacity: 1, height: '100%', border: 'none', position: 'absolute', top: 0, bottom: 0, left: 0, right: 0}}>
+      <Card.Img style={{height: '100%', objectFit: 'cover', objectPosition: 'center', borderRadius: '0'}} src={category.backgroundImage} alt="Card image" />
+      <Card.ImgOverlay style={{height: '100%'}} className="d-flex justify-content-center align-items-center">
+        <Card.Title><Button variant="primary" as={Link} to={'/categories/' + category.id}>{category.title}</Button></Card.Title>
       </Card.ImgOverlay>
     </Card>
   );

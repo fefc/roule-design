@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/roule-design/static/css/main.f2f38c24.chunk.css",
-    "main.js": "/roule-design/static/js/main.26f8e5d4.chunk.js",
-    "main.js.map": "/roule-design/static/js/main.26f8e5d4.chunk.js.map",
+    "main.js": "/roule-design/static/js/main.8182cedb.chunk.js",
+    "main.js.map": "/roule-design/static/js/main.8182cedb.chunk.js.map",
     "runtime-main.js": "/roule-design/static/js/runtime-main.68f9f52a.js",
     "runtime-main.js.map": "/roule-design/static/js/runtime-main.68f9f52a.js.map",
     "static/js/2.d74ea5dc.chunk.js": "/roule-design/static/js/2.d74ea5dc.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.68f9f52a.js",
     "static/js/2.d74ea5dc.chunk.js",
     "static/css/main.f2f38c24.chunk.css",
-    "static/js/main.26f8e5d4.chunk.js"
+    "static/js/main.8182cedb.chunk.js"
   ]
 }

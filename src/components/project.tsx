@@ -19,12 +19,32 @@ const Project: FC<props> = ({ project }) => {
   }
 
   return (
-    <Card className="text-center" style={{border: 'none'}}>
+    <>
+    <style type="text/css">
+    {`
+      .card-img {
+        opacity: 1;
+        transition: .5s ease;
+      }
+
+      a.card:hover .card-img {
+        opacity: 0.8;
+      }
+
+      .my-col {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    `}
+    </style>
+    <Card className="text-center" style={{opacity: 1, border: 'none'}} as={Link} to={'/projects/' + project.id}>
       <Card.Img style={{height: '100%', objectFit: 'cover', objectPosition: 'center', borderRadius: '0'}} src={project.backgroundImage} alt="Card image" />
       <Card.ImgOverlay style={{display: 'flex', justifyContent: 'center', alignItems:'end'}}>
-        <Card.Title><Button variant="primary" as={Link} to={'/projects/' + project.id}>{project.title}</Button></Card.Title>
+        <Card.Title>{project.title}</Card.Title>
       </Card.ImgOverlay>
     </Card>
+    </>
   );
 };
 

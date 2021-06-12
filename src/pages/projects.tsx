@@ -56,21 +56,29 @@ const ProjectsPage = () => {
         }
       `}
       </style>
-      <Container fluid>
+      <Container className="pt-3">
         <Row>
-          <Col className="noPadding" lg={6}>
+          <Col className="pr-lg-2 pl-lg-0 pb-3" lg={6}>
             <Project project={projects[0]}></Project>
           </Col>
-          <Col className="noPadding" lg={6}>
+          <Col className="pr-lg-0 pl-lg-2 pb-3" lg={6}>
             <Project project={projects[1]}></Project>
           </Col>
         </Row>
         <Row>
-          <Col className="noPadding" lg={6}>
+          <Col className="pr-lg-2 pl-lg-0 pb-3" lg={6}>
             <Project project={projects[2]}></Project>
           </Col>
-          <Col className="noPadding" lg={6}>
+          <Col className="pr-lg-0 pl-lg-2 pb-3" lg={6}>
             <Project project={projects[3]}></Project>
+          </Col>
+        </Row>
+        <Row>
+          <Col className="pr-lg-2 pl-lg-0 pb-3" lg={6}>
+            <Project project={projects[4]}></Project>
+          </Col>
+          <Col className="pr-lg-0 pl-lg-2 pb-3" lg={6}>
+            <Project project={projects[5]}></Project>
           </Col>
         </Row>
       </Container>

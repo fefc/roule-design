@@ -19,8 +19,8 @@ const Project: FC<props> = ({ project }) => {
   }
 
   return (
-    <Card className="text-center" style={{border: 'none', padding: '3rem'}}>
-      <Card.Img src={project.backgroundImage} alt="Card image" />
+    <Card className="text-center" style={{border: 'none'}}>
+      <Card.Img style={{height: '100%', objectFit: 'cover', objectPosition: 'center', borderRadius: '0'}} src={project.backgroundImage} alt="Card image" />
       <Card.ImgOverlay style={{display: 'flex', justifyContent: 'center', alignItems:'end'}}>
         <Card.Title><Button variant="primary" as={Link} to={'/projects/' + project.id}>{project.title}</Button></Card.Title>
       </Card.ImgOverlay>

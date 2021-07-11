@@ -10,7 +10,7 @@ const HomePage = () => {
       <Container fluid style={{height: '100%', backgroundImage: `url(${background})`, backgroundPosition: 'center', backgroundSize: 'cover'}}>
         <Row style={{height: '100%'}}>
           <Col className="d-flex justify-content-center align-items-center" lg={6} md={{ order: 2 }}>
-            <Card>
+            <Card style={{ opacity: 0.9 }}>
               <Card.Header>A propos</Card.Header>
               <Card.Body>
                   <p>

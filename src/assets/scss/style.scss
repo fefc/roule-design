@@ -22,12 +22,21 @@ a.btn {
 }
 
 div.card {
-  opacity: 0.9;
   border-radius: 0;
 
   div.card-header {
     text-align: center !important;
   }
+}
+
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
 }
 
 // Import Bootstrap and its default variables

@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter,  Switch,  Route,  Link } from 'react-router-dom';
+import { BrowserRouter,  Switch,  Route,  Link, Redirect, useLocation } from 'react-router-dom';
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { Navbar, Nav, Container } from 'react-bootstrap'
 
 import HomePage from './home';
@@ -23,6 +24,23 @@ import ProjectPage from './project';
 const RootPage = () => {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <Switch>
+        <Route exact path="/">
+          <Redirect to="/home" />
+        </Route>
+        <Route path="*">
+          <Test />
+        </Route>
+      </Switch>
+    </BrowserRouter>
+  );
+}
+
+const Test = () => {
+  let location = useLocation();
+
+  return (
+    <div>
       <Navbar fixed="top" bg="primary" expand="lg">
         <Navbar.Brand as={Link} to="/" style={{fontWeight: 700}}>
           Roule Design
@@ -36,16 +54,18 @@ const RootPage = () => {
         </Navbar.Collapse>
       </Navbar>
       <Container fluid className="noPadding" style={{marginTop: '56px', height: 'calc(100vh - 56px)'}}>
-        <Switch>
-          <Route exact path="/" component={ HomePage }/>
-          <Route exact path="/categories" component={ CategoriesPage }/>
-          <Route exact path="/categories/:category" component={ ProjectsPage }/>
-          <Route exact path="/projects/:project" component={ ProjectPage }/>
-
-
-        </Switch>
+        <TransitionGroup style={{position: 'relative', height: '100%', width: '100%'}}>
+          <CSSTransition key={location.key} classNames="fade" timeout={1000}>
+            <Switch location={location}>
+              <Route exact path="/home" component={ HomePage }/>
+              <Route exact path="/categories" component={ CategoriesPage }/>
+              <Route exact path="/categories/:category" component={ ProjectsPage }/>
+              <Route exact path="/projects/:project" component={ ProjectPage }/>
+            </Switch>
+          </CSSTransition>
+        </TransitionGroup>
       </Container>
-    </BrowserRouter>
+    </div>
   );
 }
 

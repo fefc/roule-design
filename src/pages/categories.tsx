@@ -36,26 +36,24 @@ const CategoriesPage = () => {
 
 
   return (
-    <>
-      <Container fluid className="d-flex flex-column" style={{position: 'absolute', top: '56px', bottom: 0}}>
-        <Row className="flex-fill">
-          <Col className="noPadding" lg={6}>
-            <Category category={cateogories[0]}></Category>
-          </Col>
-          <Col className="noPadding" lg={6}>
-          <Category category={cateogories[1]}></Category>
-          </Col>
-        </Row>
-        <Row className="flex-fill">
-          <Col className="noPadding" lg={6}>
-          <Category category={cateogories[2]}></Category>
-          </Col>
-          <Col className="noPadding" lg={6}>
-          <Category category={cateogories[3]}></Category>
-          </Col>
-        </Row>
-      </Container>
-    </>
+    <Container fluid className="d-flex flex-column" style={{position: 'absolute', top: '0', bottom: '0'}}>
+      <Row className="flex-fill">
+        <Col className="noPadding" lg={6}>
+          <Category category={cateogories[0]}></Category>
+        </Col>
+        <Col className="noPadding" lg={6}>
+        <Category category={cateogories[1]}></Category>
+        </Col>
+      </Row>
+      <Row className="flex-fill">
+        <Col className="noPadding" lg={6}>
+        <Category category={cateogories[2]}></Category>
+        </Col>
+        <Col className="noPadding" lg={6}>
+        <Category category={cateogories[3]}></Category>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 

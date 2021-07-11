@@ -13,38 +13,23 @@ const ProjectPage = () => {
     }
 
   return (
-    <>
-      <style type="text/css">
-      {`
-        .my-row {
-          height: 100%;
-        }
-
-        .my-col {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-      `}
-      </style>
-      <Container fluid>
-        <Row>
-          <Col className="noPadding" lg={6}>
-            <Image src={project.image} rounded style={{width: '100%'}} />
-          </Col>
-          <Col lg={6} style={{display: 'flex', justifyContent: 'center', alignItems:'center'}}>
-            <Card>
-              <Card.Body>
-                <Card.Title style={{textAlign: 'center', marginBottom: '2rem'}}>{project.title}</Card.Title>
-                <Card.Subtitle style={{textAlign: 'center', marginBottom: '1rem'}}>{project.subtitle}</Card.Subtitle>
-                <Card.Text style={{textAlign: 'justify'}}>{project.content}</Card.Text>
-                <Card.Link href="#">Google drive Link</Card.Link>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
-    </>
+    <Container fluid style={{position: 'absolute', top: '0', bottom: '0', overflowY: 'auto', backgroundColor: 'white'}}>
+      <Row>
+        <Col className="noPadding" lg={6}>
+          <Image src={project.image} rounded style={{width: '100%'}} />
+        </Col>
+        <Col lg={6} style={{display: 'flex', justifyContent: 'center', alignItems:'center'}}>
+          <Card>
+            <Card.Body>
+              <Card.Title style={{textAlign: 'center', marginBottom: '2rem'}}>{project.title}</Card.Title>
+              <Card.Subtitle style={{textAlign: 'center', marginBottom: '1rem'}}>{project.subtitle}</Card.Subtitle>
+              <Card.Text style={{textAlign: 'justify'}}>{project.content}</Card.Text>
+              <Card.Link href="#">Google drive Link</Card.Link>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 

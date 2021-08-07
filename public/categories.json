@@ -3,22 +3,75 @@
     {
       "id": "design-produit",
       "title": "Design Produit",
-      "backgroundImage": "./imgs/design_produit.jpg"
+      "backgroundImage": "./imgs/design_produit.jpg",
+      "projects": [
+        {
+          "id": "durance",
+          "title": "Durance",
+          "backgroundImage": "./imgs/graphisme.jpg"
+        },
+        {
+          "id": "te-ra",
+          "title": "Ta Re",
+          "backgroundImage": "./imgs/background.jpg"
+        },
+        {
+          "id": "blabla",
+          "title": "BlaBla",
+          "backgroundImage": "./imgs/photographie.jpg"
+        }
+      ]
     },
     {
       "id": "graphisme",
       "title": "Graphisme",
-      "backgroundImage": "./imgs/graphisme.jpg"
+      "backgroundImage": "./imgs/graphisme.jpg",
+      "projects": [
+        {
+          "id": "one",
+          "title": "Mon projet 1",
+          "backgroundImage": "./imgs/graphisme.jpg"
+        },
+        {
+          "id": "two",
+          "title": "Mon proj 2",
+          "backgroundImage": "./imgs/background.jpg"
+        }
+      ]
     },
     {
       "id": "packaging",
       "title": "Packaging",
-      "backgroundImage": "./imgs/background.jpg"
+      "backgroundImage": "./imgs/background.jpg",
+      "projects": [
+        {
+          "id": "one",
+          "title": "Mon paquet 1",
+          "backgroundImage": "./imgs/graphisme.jpg"
+        },
+        {
+          "id": "two",
+          "title": "Mon paquet 2",
+          "backgroundImage": "./imgs/background.jpg"
+        }
+      ]
     },
     {
       "id": "photographie",
       "title": "Photographie",
-      "backgroundImage": "./imgs/photographie.jpg"
+      "backgroundImage": "./imgs/photographie.jpg",
+      "projects": [
+        {
+          "id": "one",
+          "title": "Mon photo 2",
+          "backgroundImage": "./imgs/graphisme.jpg"
+        },
+        {
+          "id": "two",
+          "title": "Mon photo 200",
+          "backgroundImage": "./imgs/background.jpg"
+        }
+      ]
     }
   ]
 }

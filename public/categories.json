@@ -1,0 +1,24 @@
+{
+  "categories": [
+    {
+      "id": "design-produit",
+      "title": "Design Produit",
+      "backgroundImage": "./imgs/design_produit.jpg"
+    },
+    {
+      "id": "graphisme",
+      "title": "Graphisme",
+      "backgroundImage": "./imgs/graphisme.jpg"
+    },
+    {
+      "id": "packaging",
+      "title": "Packaging",
+      "backgroundImage": "./imgs/background.jpg"
+    },
+    {
+      "id": "photographie",
+      "title": "Photographie",
+      "backgroundImage": "./imgs/photographie.jpg"
+    }
+  ]
+}

@@ -1,58 +1,54 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Card, Col, Row, Button } from 'react-bootstrap'
-
-import background from './../assets/imgs/background.jpg';
-
-import designProduit from './../assets/imgs/design_produit.jpg';
-import graphisme from './../assets/imgs/graphisme.jpg';
-import photograophie from './../assets/imgs/photographie.jpg';
+import { Container, Card, Col, Row, Button, Spinner } from 'react-bootstrap'
 
 import Category from "./../components/category";
 
 const CategoriesPage = () => {
-  const cateogories = [
-    {
-      id: 'design-produit',
-      title: 'Design Produit',
-      backgroundImage: designProduit
-    },
-    {
-      id: 'graphisme',
-      title: 'Graphisme',
-      backgroundImage: graphisme
-    },
-    {
-      id: 'packaging',
-      title: 'Packaging',
-      backgroundImage: background
-    },
-    {
-      id: 'photographie',
-      title: 'Photographie',
-      backgroundImage: photograophie
-    }
-  ]
+  const [init, setInit] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [categories, setCategories] = useState<any[]>([]);
 
+  useEffect(() => {
+    fetchCategories();
+  }, [init]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  async function fetchCategories() {
+    try {
+      const response = await fetch(process.env.PUBLIC_URL + '/categories.json');
+      const content = await response.json();
+
+      console.log(content.categories);
+
+      setCategories(content.categories);
+      setLoading(false);
+
+    } catch (e) {
+      console.log(e);
+      //openErrorPage(1000, '/docs/' + docId + '/' + language + '.md');
+    }
+  }
 
   return (
     <Container fluid className="d-flex flex-column" style={{position: 'absolute', top: '0', bottom: '0'}}>
+    { loading ?
+      <Row>
+        <Col style={{
+          justifyContent: 'center',
+          display: 'flex'}}>
+          <Spinner animation="border" variant="primary"></Spinner>
+        </Col>
+      </Row> :
       <Row className="flex-fill">
-        <Col className="noPadding" lg={6}>
-          <Category category={cateogories[0]}></Category>
-        </Col>
-        <Col className="noPadding" lg={6}>
-        <Category category={cateogories[1]}></Category>
-        </Col>
+        {
+          categories.map((c) =>
+            <Col className="noPadding" lg={6} key={c.id}>
+              <Category category={c}></Category>
+            </Col>
+          )
+        }
       </Row>
-      <Row className="flex-fill">
-        <Col className="noPadding" lg={6}>
-        <Category category={cateogories[2]}></Category>
-        </Col>
-        <Col className="noPadding" lg={6}>
-        <Category category={cateogories[3]}></Category>
-        </Col>
-      </Row>
+    }
     </Container>
   );
 }

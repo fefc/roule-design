@@ -30,18 +30,12 @@ const Project: FC<props> = ({ project }) => {
       a.card:hover .card-img {
         opacity: 0.8;
       }
-
-      .my-col {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
     `}
     </style>
     <Card className="text-center" style={{opacity: 1, border: 'none', height: '100%'}} as={Link} to={'/projects/' + project.id}>
       <Card.Img style={{height: '100%', objectFit: 'cover', objectPosition: 'center', borderRadius: '0'}} src={process.env.PUBLIC_URL + project.backgroundImage} alt="Card image" />
       <Card.ImgOverlay style={{display: 'flex', justifyContent: 'center', alignItems:'end'}}>
-        <Card.Title>{project.title}</Card.Title>
+        <Card.Title><Button variant="primary" as={Link} to={'/projects/' + project.id}>{project.title}</Button></Card.Title>
       </Card.ImgOverlay>
     </Card>
     </>

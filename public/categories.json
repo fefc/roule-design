@@ -36,24 +36,31 @@
           "id": "japon",
           "title": "Japon",
           "backgroundImage": "/imgs/graphisme/japon.jpg"
-        }
-        ,
-        {
-          "id": "jardin",
-          "title": "Jardin",
-          "backgroundImage": "/imgs/graphisme/jardin.jpg"
-        }
-        ,
+        },
         {
           "id": "newyork",
           "title": "New York",
           "backgroundImage": "/imgs/graphisme/new york.jpg"
-        }
-        ,
+        },
+        {
+          "id": "jardin",
+          "title": "Jardin",
+          "backgroundImage": "/imgs/graphisme/jardin.jpg"
+        },
         {
           "id": "portual",
           "title": "Portugal",
           "backgroundImage": "/imgs/graphisme/portugal.jpg"
+        },
+        {
+          "id": "flyers",
+          "title": "Flyers",
+          "backgroundImage": "/imgs/graphisme/flyers rugby.jpg"
+        },
+        {
+          "id": "cartes",
+          "title": "Cartes",
+          "backgroundImage": "/imgs/graphisme/cartes.jpg"
         }
       ]
     },

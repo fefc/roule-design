@@ -38,8 +38,8 @@ const Project: FC<props> = ({ project }) => {
       }
     `}
     </style>
-    <Card className="text-center" style={{opacity: 1, border: 'none'}} as={Link} to={'/projects/' + project.id}>
-      <Card.Img style={{height: '100%', objectFit: 'cover', objectPosition: 'center', borderRadius: '0'}} src={project.backgroundImage} alt="Card image" />
+    <Card className="text-center" style={{opacity: 1, border: 'none', height: '100%'}} as={Link} to={'/projects/' + project.id}>
+      <Card.Img style={{height: '100%', objectFit: 'cover', objectPosition: 'center', borderRadius: '0'}} src={process.env.PUBLIC_URL + project.backgroundImage} alt="Card image" />
       <Card.ImgOverlay style={{display: 'flex', justifyContent: 'center', alignItems:'end'}}>
         <Card.Title>{project.title}</Card.Title>
       </Card.ImgOverlay>

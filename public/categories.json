@@ -28,14 +28,32 @@
       "backgroundImage": "./imgs/graphisme.jpg",
       "projects": [
         {
-          "id": "one",
-          "title": "Mon projet 1",
-          "backgroundImage": "./imgs/graphisme.jpg"
+          "id": "croatie",
+          "title": "Croatie",
+          "backgroundImage": "/imgs/graphisme/croatie.jpg"
         },
         {
-          "id": "two",
-          "title": "Mon proj 2",
-          "backgroundImage": "./imgs/background.jpg"
+          "id": "japon",
+          "title": "Japon",
+          "backgroundImage": "/imgs/graphisme/japon.jpg"
+        }
+        ,
+        {
+          "id": "jardin",
+          "title": "Jardin",
+          "backgroundImage": "/imgs/graphisme/jardin.jpg"
+        }
+        ,
+        {
+          "id": "newyork",
+          "title": "New York",
+          "backgroundImage": "/imgs/graphisme/new york.jpg"
+        }
+        ,
+        {
+          "id": "portual",
+          "title": "Portugal",
+          "backgroundImage": "/imgs/graphisme/portugal.jpg"
         }
       ]
     },

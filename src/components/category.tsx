@@ -7,7 +7,8 @@ type props = {
   category: {
     id: string,
     title: string,
-    backgroundImage: string
+    backgroundImage: string,
+    projects: []
   }
 };
 
@@ -22,7 +23,7 @@ const Category: FC<props> = ({ category }) => {
     <Card className="text-center" style={{height: '100%', border: 'none', position: 'absolute', top: 0, bottom: 0, left: 0, right: 0}}>
       <Card.Img style={{height: '100%', objectFit: 'cover', objectPosition: 'center', borderRadius: '0'}} src={category.backgroundImage} alt="Card image" />
       <Card.ImgOverlay style={{height: '100%'}} className="d-flex justify-content-center align-items-center">
-        <Card.Title><Button variant="primary" as={Link} to={'/categories/' + category.id}>{category.title}</Button></Card.Title>
+        <Card.Title><Button variant="primary" as={Link} to={{pathname: '/categories/' + category.id, state: category}}>{category.title}</Button></Card.Title>
       </Card.ImgOverlay>
     </Card>
   );
